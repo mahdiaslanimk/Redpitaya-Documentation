@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --card: #f8fafc;
+    --card-foreground: #0f172a;
+    --border: #e2e8f0;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --accent: #f43f5e;
+    --sidebar-bg: #f8fafc;
+    --sidebar-border: #e2e8f0;
+    --code-bg: #f1f5f9;
+  }
+
+  .dark {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --card: #1e293b;
+    --card-foreground: #f1f5f9;
+    --border: #334155;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #f43f5e;
+    --sidebar-bg: #1e293b;
+    --sidebar-border: #334155;
+    --code-bg: #1e293b;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+  }
+}
+
+/* Code highlighting */
+pre {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+}
+
+code {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.875em;
+}
+
+/* Prose overrides for dark mode */
+.dark .prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: #f43f5e;
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-counters: var(--muted-foreground);
+  --tw-prose-bullets: var(--muted-foreground);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--foreground);
+  --tw-prose-quote-borders: var(--border);
+  --tw-prose-captions: var(--muted-foreground);
+  --tw-prose-code: var(--foreground);
+  --tw-prose-pre-code: #e2e8f0;
+  --tw-prose-pre-bg: #1e293b;
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+}
