@@ -17,8 +17,14 @@
     "react-markdown": "^10.1.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-highlight": "^7.0.2",
+    "rehype-pretty-code": "^0.14.3",
     "rehype-slug": "^6.0.0",
-    "remark-gfm": "^4.0.1"
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "shiki": "^4.0.2",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@types/node": "^20",
